@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><title>GLAMOUR | Items</title>
+
+<link rel="icon" type="image/svg+xml"
+href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111111'/%3E%3Ctext x='50%25' y='52%25' font-size='48' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EG%3C/text%3E%3C/svg%3E">
+    <title>Zay Shop - Product Detail Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+<!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+</head>
+<script>
+function changeProductImage(element) {
+    document.getElementById('mainProductImage').src = element.src;
+}
+</script>
+<body>
+    <!-- Start Top Nav -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                </div>
+                <div>
+                    <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Top Nav -->
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            
+<a class="navbar-brand text-uppercase glamour-logo" href="index.html">
+    GLAMOUR
+</a>
+
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                            <div class="input-group-text">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Open Content -->
+    <section class="bg-light">
+        <div class="container pb-5">
+            <div class="row">
+                
+
+<div class="col-lg-5 mt-5">
+
+    <div class="glamour-gallery">
+
+        <!-- MAIN PHOTO -->
+        <div class="main-product-image">
+            <img id="mainProductImage"
+                 src="assets/img/Alexander Mcqueen.jpg"
+                 alt="Alexander McQueen Jacket">
+        </div>
+
+        <!-- THUMBNAILS -->
+        <div class="product-thumbnails">
+
+            <img src="assets/img/Mq1.jfif"
+                 onclick="changeProductImage(this)" alt="View 1">
+
+            <img src="assets/img/Mq2.jfif"
+                 onclick="changeProductImage(this)" alt="View 2">
+
+            <img src="assets/img/Mq3.jfif"
+                 onclick="changeProductImage(this)" alt="View 3">
+
+            <img src="assets/img/Mq4.jfif"
+                 onclick="changeProductImage(this)" alt="View 4">
+
+            <img src="assets/img/Mq5.jfif"
+                 onclick="changeProductImage(this)" alt="View 5">
+
+            <img src="assets/img/Mq6.jfif"
+                 onclick="changeProductImage(this)" alt="View 6">
+
+        </div>
+
+    </div>
+
+</div>
+<!-- col end -->
+
+
+    <div class="col-lg-7">             
+<div class="glamour-product-info">
+
+    <span class="product-brand">ALEXANDER MCQUEEN</span>
+
+    <h1 class="product-title">
+        Alexander McQueen Skull Embroidered Letterman Jacket
+    </h1>
+
+    <h3 class="product-price">71 000 ₴</h3>
+
+    <hr>
+
+    <div class="product-sizes">
+        <strong>Size:</strong>
+        <button class="size-btn">S</button>
+        <button class="size-btn">M</button>
+        <button class="size-btn">XL</button>
+    </div>
+
+    <div class="product-quantity">
+        <strong>Quantity:</strong>
+        <button onclick="changeQuantity(-1)">−</button>
+        <span id="quantity">1</span>
+        <button onclick="changeQuantity(1)">+</button>
+    </div>
+
+    <button class="glamour-buy-btn">BUY NOW</button>
+    <button class="glamour-cart-btn">ADD TO CART</button>
+
+    <div class="product-description">
+        <h4>Description</h4>
+        <p>
+            Культова куртка-бомбер в стилі коледжу (letterman jacket) від Alexander McQueen із фірмовою вишивкою у вигляді черепа та сміливим університетським дизайном. Ідеальне поєднання розкоші, комфорту та неповторного стилю.
+        </p>
+    </div>
+
+    <hr>
+
+    <div class="product-details">
+        <p><strong>Brand:</strong> Alexander McQueen</p>
+        <p><strong>Color:</strong> Black</p>
+        <p><strong>Style:</strong> Letterman Jacket</p>
+        <p><strong>Details:</strong> Skull embroidery and letter patch</p>
+        <p><strong>Fit:</strong> Regular fit</p>
+        <p><strong>Collection:</strong> Designer Collection</p>
+    </div>
+
+</div>
+</div>
+
+<script>
+function changeQuantity(value) {
+    const quantity = document.getElementById('quantity');
+    let current = parseInt(quantity.textContent);
+    current = Math.max(1, current + value);
+    quantity.textContent = current;
+}
+</script>
+
+    <!-- Close Content -->
+
+    <!-- Start Article -->
+    
+<!-- GLAMOUR RELATED PRODUCTS -->
+<style>
+.glamour-related {
+    background: #fff;
+    padding: 65px 0 80px;
+}
+
+.glamour-related .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.glamour-related h2 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 35px;
+    letter-spacing: 0.5px;
+}
+
+.glamour-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.glamour-related-card {
+    background: #fff;
+    border: 1px solid #dedede;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.glamour-related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.glamour-related-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #fff;
+    border-bottom: 1px solid #dedede;
+}
+
+.glamour-related-info {
+    padding: 17px 18px 20px;
+}
+
+.glamour-related-info h3 {
+    color: #111;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0 0 12px;
+}
+
+.glamour-related-info .sizes {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.glamour-related-info .collection {
+    color: #aaa;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.glamour-related-info .price {
+    color: #111;
+    text-align: center;
+    font-size: 19px;
+    margin: 0;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .glamour-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .glamour-related-card img {
+        height: 230px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glamour-related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<section class="glamour-related">
+    <div class="container">
+
+        <h2>Related Products</h2>
+
+        <div class="glamour-related-grid">
+
+            <!-- PRODUCT 1 -->
+            <div class="glamour-related-card">
+                <img src="assets/img/1017 ALYX 9SM.jpg"
+                     alt="1017 ALYX 9SM Hoodie">
+                <div class="glamour-related-info">
+                    <h3>1017 ALYX 9SM Hoodie</h3>
+                    <p class="sizes">XS / S / M / L / XL / XXL</p>
+                    <p class="collection">Designer Collection</p>
+                    <p class="price">PRE-ORDER</p>
+                </div>
+            </div>
+
+            <!-- PRODUCT 2 -->
+            <div class="glamour-related-card">
+                <img src="assets/img/Rick Owens x Birkenstock boots.jpg"
+                     alt="Rick Owens x Birkenstock Boots">
+                <div class="glamour-related-info">
+                    <h3>Rick Owens x Birkenstock Boots</h3>
+                    <p class="sizes">40 / 41 / 42 / 43</p>
+                    <p class="collection">Designer Footwear</p>
+                    <p class="price">40 700 ₴</p>
+                </div>
+            </div>
+
+            <!-- PRODUCT 3 -->
+            <!-- PRODUCT 3 -->
+<div class="glamour-related-card">
+    <img src="assets/img/Balenciaga I Lamborghini pants.jpg"
+         alt="Balenciaga x Lamborghini Pants">
+
+    <div class="glamour-related-info">
+        <h3>Balenciaga x Lamborghini Pants</h3>
+        <p class="sizes">XS / S / M / L / XL</p>
+        <p class="collection">Designer Collection</p>
+        <p class="price">70 500 ₴</p>
+    </div>
+</div>
+
+            <!-- PRODUCT 4 -->
+            <div class="glamour-related-card">
+                <img src="assets/img/y3-hoodie.jpg"
+                     alt="Y-3 Zip Hoodie">
+                <div class="glamour-related-info">
+                    <h3>Y-3 Zip Hoodie</h3>
+                    <p class="sizes">S / M / L / XL</p>
+                    <p class="collection">Designer Collection</p>
+                    <p class="price">14 500 ₴</p>
+                </div>
+            </div>
+
+            <!-- PRODUCT 5 -->
+            <div class="glamour-related-card">
+                <img src="assets/img/offwhite-shoes.jpg"
+                     alt="OFF-WHITE Shoes">
+                <div class="glamour-related-info">
+                    <h3>OFF-WHITE Shoes</h3>
+                    <p class="sizes">39 / 40 / 41 / 42</p>
+                    <p class="collection">Footwear Collection</p>
+                    <p class="price">28 000 ₴</p>
+                </div>
+            </div>
+
+            <!-- PRODUCT 6 -->
+            <div class="glamour-related-card">
+                <img src="assets/img/acne-tee.jpg"
+                     alt="Acne Studios T-Shirt">
+                <div class="glamour-related-info">
+                    <h3>Acne Studios T-Shirt</h3>
+                    <p class="sizes">XS / S / M / L / XL</p>
+                    <p class="collection">Designer Collection</p>
+                    <p class="price">16 675 ₴</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- END GLAMOUR RELATED PRODUCTS -->
+
+    
+
+
+    <!-- Start Footer -->
+    <!-- GLAMOUR FOOTER -->
+<footer class="glamour-footer">
+    <div class="glamour-footer-container">
+
+        <div class="glamour-footer-grid">
+
+            <!-- CONTACTS -->
+            <div class="glamour-footer-column">
+                <h4>GLAMOUR</h4>
+                <hr>
+
+                <p><i class="fas fa-map-marker-alt"></i>
+                м. Одеса, вул. Дерибасівська, 21</p>
+
+                <p><i class="fas fa-phone"></i>
+                048 001 0808</p>
+
+                <p><i class="fas fa-envelope"></i>
+                glamourmdp@gmail.com</p>
+            </div>
+
+            <!-- CATEGORIES -->
+            <div class="glamour-footer-column">
+                <h4>КАТЕГОРІЇ</h4>
+                <hr>
+
+                <a href="shop.html">Одяг</a>
+                <a href="shop.html">Взуття</a>
+                <a href="shop.html">Аксесуари</a>
+                <a href="shop.html">Новинки</a>
+                <a href="shop.html">Дизайнери</a>
+            </div>
+
+            <!-- INFORMATION -->
+            <div class="glamour-footer-column">
+                <h4>ІНФОРМАЦІЯ</h4>
+                <hr>
+
+                <a href="about.html">Про нас</a>
+                <a href="about.html">Доставка та оплата</a>
+                <a href="about.html">Повернення та обмін</a>
+                <a href="contact.html">Контакти</a>
+                <a href="shop.html">Каталог</a>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="glamour-footer-column">
+                <h4>ПІДПИШІТЬСЯ НА НОВИНИ</h4>
+                <hr>
+
+                <p>
+                    Отримуйте інформацію про нові надходження,
+                    знижки та спеціальні пропозиції.
+                </p>
+
+                <form class="glamour-newsletter">
+                    <input type="email" placeholder="Ваш email">
+                    <button type="submit">➜</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="glamour-footer-bottom">
+
+            <div class="glamour-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <p>
+                © 2026 Увага! Цей веб-сайт є навчальним проєктом, створеним виключно з освітньою метою в межах навчального курсу. Сайт не здійснює комерційної діяльності, не надає платних послуг і не призначений для отримання прибутку. Зробила сайт: Мілена Парфенова | Шаблон: TemplateMo | Фото: Pinterest
+            </p>
+
+        
+        </div>
+
+    </div>
+</footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+
+    <!-- Start Slider Script -->
+    <script src="assets/js/slick.min.js"></script>
+    <script>
+        $('#carousel-related-product').slick({
+            infinite: true,
+            arrows: false,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            dots: true,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3
+                    }
+                }
+            ]
+        });
+    </script>
+    <!-- End Slider Script -->
+<script>
+function changeProductImage(element) {
+    document.getElementById('mainProductImage').src = element.src;
+}
+</script>
+
+</body>
+
+</html>

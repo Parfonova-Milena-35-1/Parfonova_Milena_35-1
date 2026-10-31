@@ -1,0 +1,1970 @@
+/*
+Custom Css
+*/
+/* GLAMOUR — основные стили */
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.navbar-brand {
+    color: #111111 !important;
+    font-weight: 900 !important;
+    letter-spacing: 3px;
+}
+
+.navbar .nav-link {
+    color: #111111 !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #888888 !important;
+}
+
+.text-success {
+    color: #111111 !important;
+}
+
+.bg-success,
+.btn-success {
+    background-color: #111111 !important;
+}
+
+.btn-success {
+    border-color: #111111 !important;
+    border-radius: 0;
+}
+
+.btn-success:hover {
+    background-color: #555555 !important;
+    border-color: #555555 !important;
+}
+
+.card {
+    border-radius: 0;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+/* GLAMOUR — главный экран */
+
+.glamour-hero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+.glamour-hero-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 650px;
+    padding: 35px;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.3s ease;
+}
+
+.glamour-hero-card:hover {
+    filter: brightness(0.8);
+}
+
+.glamour-hero-content {
+    text-align: center;
+    color: white;
+}
+
+.glamour-hero-content span {
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.glamour-hero-content h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 15px 0;
+}
+
+.glamour-hero-content p {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.glamour-new {
+    background-color: #777777;
+}
+
+.glamour-denim {
+    background-color: #555555;
+}
+
+.glamour-outerwear {
+    background-color: #333333;
+}
+
+@media (max-width: 768px) {
+    .glamour-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .glamour-hero-card {
+        min-height: 450px;
+    }
+}
+/* GLAMOUR — фотографии главного экрана */
+
+.glamour-new {
+    background-image: url("../img/collection.jpg");
+}
+
+.glamour-denim {
+    background-image: url("../img/denim.jpg");
+}
+
+.glamour-outerwear {
+    background-image: url("../img/outerwear.jpg");
+}
+/* GLAMOUR — улучшение главного экрана */
+
+.glamour-hero {
+    gap: 0;
+    background-color: #ffffff;
+}
+
+.glamour-hero-card {
+    min-height: 650px;
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px 45px;
+    isolation: isolate;
+}
+
+/* Затемнение снизу, чтобы текст читался */
+.glamour-hero-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 55%,
+        rgba(0, 0, 0, 0.55) 100%
+    );
+    z-index: -1;
+}
+
+.glamour-hero-content {
+    width: 100%;
+    text-align: center;
+}
+
+.glamour-hero-content h2 {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.glamour-hero-content p {
+    color: #ffffff;
+}
+
+/* Для телефона */
+@media (max-width: 768px) {
+    .glamour-hero-card {
+        min-height: 500px;
+    }
+}
+/* GLAMOUR — фотографии товаров без обрезки */
+
+.glamour-hero-card {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f5f5f5;
+}
+
+/* Отдельная настройка для каждой фотографии */
+
+.glamour-new {
+    background-color: #ffffff;
+}
+
+.glamour-denim {
+    background-color: #ffffff;
+}
+
+.glamour-outerwear {
+    background-color: #ffffff;
+}
+/* GLAMOUR — NEW ARRIVALS */
+
+.glamour-products {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.glamour-products h1 {
+    color: #111111;
+    letter-spacing: 2px;
+}
+
+.glamour-products .card {
+    border: 1px solid #eeeeee;
+    box-shadow: none;
+}
+
+.glamour-products .card:hover {
+    transform: translateY(-5px);
+}
+/* GLAMOUR — одинаковый размер фотографий товаров */
+
+.glamour-products .card-img-top {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #ffffff;
+    padding: 15px;
+}
+/* GLAMOUR — скрываем рейтинги и отзывы */
+
+.glamour-products .fa-star {
+    display: none !important;
+}
+
+.glamour-products .card-body > p.text-muted {
+    display: none !important;
+}
+/* GLAMOUR — исправление карточек NEW ARRIVALS */
+
+/* Выравниваем фотографии */
+.glamour-products img.card-img-top,
+.bg-light img.card-img-top {
+    width: 100% !important;
+    height: 350px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    padding: 15px !important;
+    background: white !important;
+}
+
+/* Убираем звёздочки */
+.glamour-products .fa-star,
+.bg-light .fa-star {
+    display: none !important;
+}
+
+/* Убираем отзывы */
+.glamour-products .card-body p.text-muted,
+.bg-light .card-body p.text-muted {
+    display: none !important;
+}
+/* GLAMOUR — окончательное оформление NEW ARRIVALS */
+
+/* Все фотографии одной высоты */
+.glamour-products .card > a > img {
+    width: 100% !important;
+    height: 350px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    background-color: white !important;
+}
+
+/* Убираем звёздочки */
+.glamour-products .card-body .list-inline .fa-star {
+    display: none !important;
+}
+
+/* Убираем отзывы */
+.glamour-products .card-body p.text-muted {
+    display: none !important;
+}/* GLAMOUR — одинаковая высота фотографий NEW ARRIVALS */
+
+.glamour-products .card-img-top {
+    width: 100% !important;
+    height: 350px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    background-color: #fff !important;
+}
+/* GLAMOUR — FOOTER */
+
+#tempaltemo_footer {
+    background-color: #111111 !important;
+}
+
+#tempaltemo_footer h2 {
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#tempaltemo_footer .logo {
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+#tempaltemo_footer a {
+    color: #cccccc !important;
+    text-decoration: none;
+}
+
+#tempaltemo_footer a:hover {
+    color: #ffffff !important;
+}
+/* GLAMOUR — белый логотип в футере */
+
+#tempaltemo_footer .logo {
+    color: #ffffff !important;
+    font-weight: 900 !important;
+    letter-spacing: 3px;
+}
+/* CATEGORIES — белый логотип в футере */
+
+#tempaltemo_footer .logo {
+    color: #ffffff !important;
+    font-weight: 900 !important;
+    letter-spacing: 3px;
+}
+/* GLAMOUR — красивые заголовки футера */
+
+#tempaltemo_footer h2 {
+    color: #ffffff !important;
+    font-size: 23px !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase;
+}
+
+/* Название магазина */
+#tempaltemo_footer .logo {
+    color: #ffffff !important;
+    font-size: 28px !important;
+    font-weight: 900 !important;
+    letter-spacing: 4px !important;
+}
+
+/* Линии под заголовками */
+#tempaltemo_footer h2.border-bottom {
+    border-bottom: 1px solid #444444 !important;
+    padding-bottom: 18px !important;
+}
+/* GLAMOUR — нижняя часть футера */
+
+#tempaltemo_footer .w-100.bg-black {
+    background-color: #111111 !important;
+}
+
+#tempaltemo_footer .bg-black {
+    background-color: #111111 !important;
+}
+
+#tempaltemo_footer p {
+    color: #cccccc !important;
+}
+
+#tempaltemo_footer p.text-left {
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+/* GLAMOUR — верхняя информационная полоска */
+
+#templatemo_nav_top {
+    background-color: #111111 !important;
+}
+
+#templatemo_nav_top a,
+#templatemo_nav_top i {
+    color: #ffffff !important;
+}
+
+#templatemo_nav_top a:hover {
+    color: #aaaaaa !important;
+}
+/* GLAMOUR — подписка */
+
+.glamour-newsletter-title {
+    margin-bottom: 20px;
+}
+
+.glamour-newsletter-title h3 {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.glamour-newsletter-title p {
+    color: #bbbbbb;
+    font-size: 14px;
+}
+
+#tempaltemo_footer .input-group .form-control {
+    background-color: #181818 !important;
+    color: white !important;
+    border: 1px solid #444 !important;
+    border-radius: 0 !important;
+}
+
+#tempaltemo_footer .input-group .btn-success {
+    background-color: #333333 !important;
+    color: white !important;
+    border: 1px solid #444 !important;
+    border-radius: 0 !important;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/* GLAMOUR — расположение подписки */
+
+#tempaltemo_footer .row.text-light.mb-4 {
+    align-items: flex-start;
+}
+
+#tempaltemo_footer .glamour-newsletter-title {
+    max-width: 350px;
+}
+
+#tempaltemo_footer .glamour-newsletter-title h3 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+#tempaltemo_footer .glamour-newsletter-title p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* GLAMOUR — оформление ссылок каталога */
+
+/* Наведение на категории SHOP */
+.shop-top-menu a {
+    transition: all 0.3s ease;
+}
+
+.shop-top-menu a:hover {
+    color: #777777 !important;
+    font-weight: 700;
+    text-decoration: underline !important;
+    text-underline-offset: 6px;
+}
+
+/* Нажатие на категорию */
+.shop-top-menu a:active {
+    color: #111111 !important;
+}
+
+/* Наведение на бренды и фильтры */
+.templatemo-accordion a {
+    transition: all 0.3s ease;
+}
+
+.templatemo-accordion a:hover {
+    color: #777777 !important;
+    font-weight: 600;
+}
+
+/* Убираем стандартный зелёный цвет */
+.shop-top-menu a:focus,
+.templatemo-accordion a:focus {
+    color: #555555 !important;
+}
+
+/* GLAMOUR — одинаковые размеры карточек товаров */
+
+.product-wap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-wap > .card {
+    flex: 0 0 auto;
+}
+
+.product-wap .card-img {
+    width: 100%;
+    height: 370px;
+    object-fit: contain;
+    background-color: #ffffff;
+}
+
+.product-wap .card-body {
+    flex: 1;
+    min-height: 145px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product-wap .card-body > p:last-child {
+    margin-top: auto;
+}
+
+/* GLAMOUR - Designer Brands Section */
+
+.glamour-brands {
+    background-color: #ffffff;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.brands-subtitle {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #777777;
+    margin-bottom: 12px;
+}
+
+.glamour-brands-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: #111111;
+    margin-bottom: 18px;
+    letter-spacing: -1px;
+}
+
+.brands-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #111111;
+    margin: 15px auto;
+    max-width: 400px;
+}
+
+.brands-divider::before,
+.brands-divider::after {
+    content: "";
+    height: 1px;
+    background: #dddddd;
+    flex: 1;
+}
+
+.brands-divider span {
+    font-size: 19px;
+}
+
+.glamour-brands-description {
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 55px;
+}
+
+.brand-item {
+    padding: 20px 5px;
+    transition: 0.3s ease;
+}
+
+.brand-logo-text {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111111;
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+.chrome-hearts .brand-logo-text {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.rick-owens .brand-logo-text {
+    font-family: cursive;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.alexander-mcqueen .brand-logo-text {
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.maison-margiela .brand-logo-text {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+.brand-item p {
+    color: #666666;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+
+.brand-item:hover .brand-logo-text {
+    color: #888888;
+    transform: translateY(-3px);
+    transition: 0.3s ease;
+}
+
+@media (max-width: 576px) {
+    .glamour-brands-title {
+        font-size: 36px;
+    }
+
+    .brand-logo-text {
+        font-size: 20px;
+    }
+
+    .brand-item p {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+}
+
+/* GLAMOUR Brands refinement */
+
+.brand-item p {
+    display: none;
+}
+
+.brand-logo-text {
+    min-height: 100px;
+    font-size: 29px;
+    transition: 0.3s ease;
+}
+
+.brand-item {
+    border-right: 1px solid #e5e5e5;
+}
+
+.brand-item:last-child {
+    border-right: none;
+}
+
+.brand-item:hover .brand-logo-text {
+    color: #888888;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 767px) {
+    .brand-item {
+        border-right: none;
+    }
+}
+
+/* GLAMOUR - Designer Brands */
+
+.glamour-brands {
+    background: #ffffff;
+    padding: 65px 0;
+}
+
+.brands-subtitle {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.glamour-brands-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: #111;
+    margin-bottom: 18px;
+    letter-spacing: -1px;
+}
+
+.brands-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 15px auto;
+    color: #111;
+}
+
+.brands-divider::before,
+.brands-divider::after {
+    content: "";
+    height: 1px;
+    background: #ddd;
+    flex: 1;
+}
+
+.brands-divider span {
+    font-size: 19px;
+}
+
+.glamour-brands-description {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 55px;
+}
+
+.brand-item {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.brands-list > div:last-child .brand-item {
+    border-right: none;
+}
+
+.brand-logo {
+    width: 100%;
+    max-width: 220px;
+    height: 95px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.07);
+    opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+    .glamour-brands-title {
+        font-size: 36px;
+    }
+
+    .brand-item {
+        border-right: none;
+        height: 120px;
+    }
+
+    .brand-logo {
+        max-width: 170px;
+        height: 80px;
+    }
+}
+
+/* GLAMOUR DESIGNER BRANDS */
+
+.glamour-brands {
+    background: #fff;
+    padding: 65px 0;
+}
+
+.brands-subtitle {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.glamour-brands-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: #111;
+    margin-bottom: 18px;
+}
+
+.brands-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 15px auto;
+}
+
+.brands-divider::before,
+.brands-divider::after {
+    content: "";
+    height: 1px;
+    background: #ddd;
+    flex: 1;
+}
+
+.brands-description {
+    color: #555;
+}
+
+.glamour-brands-description {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 55px;
+}
+
+.brand-item {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.brands-list > div:last-child .brand-item {
+    border-right: none;
+}
+
+.brand-logo {
+    width: 100%;
+    max-width: 220px;
+    height: 95px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.07);
+    opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+    .glamour-brands-title {
+        font-size: 36px;
+    }
+
+    .brand-item {
+        border-right: none;
+        height: 120px;
+    }
+
+    .brand-logo {
+        max-width: 170px;
+        height: 80px;
+    }
+}
+
+.brand-item {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.brands-list > div:last-child .brand-item {
+    border-right: none;
+}
+
+.brand-logo {
+    width: 100%;
+    max-width: 280px;
+    height: 150px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.08);
+    opacity: 0.75;
+}
+
+@media (max-width: 767px) {
+    .brand-item {
+        height: 150px;
+        border-right: none;
+    }
+
+    .brand-logo {
+        max-width: 220px;
+        height: 115px;
+    }
+}
+
+/* GLAMOUR FOOTER */
+
+.glamour-footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 55px 0 35px;
+    width: 100%;
+}
+
+.glamour-footer .footer-main {
+    padding-bottom: 25px;
+}
+
+.glamour-footer .footer-title {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    min-height: 26px;
+}
+
+.glamour-footer .footer-line {
+    border: 0;
+    border-top: 1px solid #444444;
+    margin-bottom: 20px;
+}
+
+.glamour-footer .footer-list,
+.glamour-footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.glamour-footer .footer-list li {
+    color: #cfd6e0;
+    margin-bottom: 13px;
+    line-height: 1.6;
+}
+
+.glamour-footer .footer-list i {
+    margin-right: 8px;
+    width: 15px;
+}
+
+.glamour-footer .footer-links li {
+    margin-bottom: 12px;
+}
+
+.glamour-footer .footer-links a {
+    color: #cfd6e0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.glamour-footer .footer-links a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.glamour-footer .footer-description {
+    color: #cfd6e0;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.glamour-footer .footer-form {
+    display: flex;
+    width: 100%;
+}
+
+.glamour-footer .footer-form input {
+    min-width: 0;
+    flex: 1;
+    background: #181818;
+    border: 1px solid #444;
+    color: white;
+    padding: 10px;
+    outline: none;
+}
+
+.glamour-footer .footer-form button {
+    width: 50px;
+    border: 1px solid #444;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.glamour-footer .footer-form button:hover {
+    background: #555;
+}
+
+.glamour-footer .footer-bottom-line {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 5px 0 25px;
+}
+
+.glamour-footer .footer-social {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.glamour-footer .footer-social a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cfd6e0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.glamour-footer .footer-social a:hover {
+    color: white;
+    border-color: white;
+    transform: translateY(-3px);
+}
+
+.glamour-footer .footer-copyright {
+    color: #cfd6e0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.glamour-footer .footer-copyright p {
+    margin-bottom: 8px;
+}
+
+.glamour-footer .footer-copyright a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .glamour-footer {
+        padding: 40px 15px 25px;
+    }
+
+    .glamour-footer .footer-social {
+        margin-bottom: 30px;
+    }
+}
+
+/* GLAMOUR FULL WIDTH FOOTER */
+
+.glamour-footer {
+    width: 100vw !important;
+    max-width: none !important;
+
+    position: relative;
+    left: 50%;
+    margin-left: -50vw !important;
+
+    box-sizing: border-box;
+    background: #111111;
+}
+
+
+/* ONLY FOOTER BACKGROUND */
+html,
+body {
+    background-color: #ffffff !important;
+}
+
+.glamour-footer {
+    background-color: #111111 !important;
+    width: 100vw !important;
+    max-width: none !important;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw !important;
+    margin-bottom: 0 !important;
+    box-sizing: border-box;
+}
+
+.glamour-footer > .container {
+    background-color: #111111 !important;
+}
+
+/* ===== GLAMOUR: PAGINATION ===== */
+
+/* Все цифры чёрные */
+.pagination .page-link {
+    color: #111111 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #dddddd !important;
+    box-shadow: none !important;
+}
+
+/* Убираем зелёный цвет активной страницы */
+.pagination .page-item.active .page-link {
+    color: #111111 !important;
+    background-color: #ffffff !important;
+    border-color: #dddddd !important;
+}
+
+/* Эффект при наведении */
+.pagination .page-link:hover {
+    color: #ffffff !important;
+    background-color: #111111 !important;
+    border-color: #111111 !important;
+}
+
+/* Убираем зелёную обводку при нажатии */
+.pagination .page-link:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+
+/* ===== GLAMOUR: REMOVE PRODUCT ICONS ===== */
+
+/* Убираем иконки при наведении на товары */
+.product-wap .product-overlay {
+    display: none !important;
+}
+
+/* Убираем зелёные эффекты кнопок */
+.product-wap .btn-success {
+    background-color: #111111 !important;
+    border-color: #111111 !important;
+}
+
+/* ===== GLAMOUR ABOUT SECTION ===== */
+
+.glamour-about {
+    background-color: #111111 !important;
+    color: #ffffff;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+.glamour-about-content {
+    max-width: 650px;
+}
+
+.glamour-about-label {
+    color: #aaaaaa;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.glamour-about h1 {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 400;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.glamour-about p {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.glamour-about h5 {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.glamour-about-image {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    object-fit: contain;
+}
+/* GLAMOUR ABOUT — FINAL DESIGN */
+
+.glamour-about {
+    background: #050505 !important;
+    color: #fff;
+    padding: 100px 0 !important;
+}
+
+.glamour-about .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.glamour-about .col-lg-7 {
+    flex: 0 0 58%;
+    max-width: 58%;
+}
+
+.glamour-about .col-lg-5 {
+    flex: 0 0 34%;
+    max-width: 34%;
+}
+
+.glamour-about-content {
+    max-width: 650px;
+}
+
+.glamour-about-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    margin-left: auto;
+    display: block;
+}
+
+@media (max-width: 991px) {
+    .glamour-about .col-lg-7,
+    .glamour-about .col-lg-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .glamour-about-image {
+        margin: 35px auto 0;
+    }
+}/* GLAMOUR — PURE BLACK BACKGROUND */
+
+.glamour-about,
+.glamour-about .container,
+.glamour-about .row,
+.glamour-about-content {
+    background-color: #000000 !important;
+    background-image: none !important;
+}
+
+.glamour-about {
+    color: #ffffff !important;
+}
+
+.glamour-about-image {
+    background: #000000 !important;
+    display: block;
+    margin-left: auto;
+    mix-blend-mode: normal;
+}/* GLAMOUR — LOGO */
+.navbar-brand {
+    font-size: 42px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+    color: #000000 !important;
+    text-transform: uppercase;
+}
+
+/* GLAMOUR - WHY CHOOSE US */
+
+.glamour-why {
+    background: #ffffff;
+    padding: 90px 0 !important;
+}
+
+.glamour-label {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.glamour-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.glamour-title strong {
+    font-weight: 800;
+}
+
+.glamour-subtitle {
+    color: #777;
+    font-size: 18px;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.glamour-feature {
+    background: #fff;
+    min-height: 345px;
+    padding: 40px 22px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+    transition: all 0.35s ease;
+    border-radius: 5px;
+}
+
+.glamour-feature:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.feature-icon {
+    width: 115px;
+    height: 115px;
+    background: #f3f3f3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.feature-icon i {
+    font-size: 48px;
+    color: #080808;
+}
+
+.glamour-feature h5 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.glamour-feature p {
+    color: #777;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .glamour-title {
+        font-size: 34px;
+    }
+
+    .glamour-feature {
+        min-height: 290px;
+    }
+}
+
+/* GLAMOUR DELIVERY & PAYMENT */
+
+.glamour-delivery {
+    background: #ffffff;
+    padding: 90px 0 !important;
+}
+
+.delivery-card {
+    height: 100%;
+    min-height: 320px;
+    padding: 40px 22px;
+    background: #fff;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+    transition: all 0.35s ease;
+}
+
+.delivery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.delivery-icon {
+    font-size: 48px;
+    color: #111;
+    margin-bottom: 28px;
+}
+
+.delivery-card h5 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.delivery-card p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* GLAMOUR FOOTER */
+
+.glamour-footer {
+    background: #111111;
+    color: #cccccc;
+    width: 100%;
+    padding: 55px 0 30px;
+    margin: 0;
+}
+
+.glamour-footer h4 {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.glamour-footer hr {
+    border-color: #383838;
+    margin-bottom: 22px;
+}
+
+.glamour-footer p {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.glamour-footer p i {
+    margin-right: 9px;
+    color: #ffffff;
+}
+
+.glamour-footer a {
+    display: block;
+    color: #cccccc;
+    text-decoration: none;
+    margin-bottom: 13px;
+    transition: 0.3s;
+}
+
+.glamour-footer a:hover {
+    color: #ffffff;
+    padding-left: 4px;
+}
+
+.footer-subscribe {
+    display: flex;
+    width: 100%;
+}
+
+.footer-subscribe input {
+    width: 80%;
+    min-width: 0;
+    padding: 12px;
+    background: #191919;
+    border: 1px solid #444;
+    color: #fff;
+    outline: none;
+}
+
+.footer-subscribe button {
+    width: 20%;
+    border: 1px solid #444;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+.glamour-footer .footer-social a {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 45px;
+    padding-top: 30px;
+}
+
+.footer-bottom p {
+    margin-bottom: 12px;
+}
+
+.glamour-footer .footer-bottom a {
+    display: inline;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .glamour-footer {
+        padding: 40px 20px 25px;
+    }
+}
+
+/* GLAMOUR LOGO - SHOP SINGLE */
+
+.glamour-logo {
+    font-size: 42px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+    color: #000000 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.glamour-logo:hover {
+    color: #000000 !important;
+}
+
+/* GLAMOUR PRODUCT PAGE */
+
+body {
+    background: #fff !important;
+}
+
+.glamour-product-info {
+    background: #fff;
+    padding: 25px 30px;
+    color: #111;
+}
+
+.product-brand {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #888;
+    font-weight: 600;
+}
+
+.product-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #111;
+    margin: 15px 0;
+}
+
+.product-price {
+    font-size: 27px;
+    font-weight: 500;
+    margin: 20px 0;
+    color: #111;
+}
+
+.product-sizes,
+.product-quantity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.size-btn {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border: 1px solid #ccc;
+    color: #111;
+    transition: .3s;
+}
+
+.size-btn:hover,
+.size-btn:focus {
+    background: #111;
+    color: white;
+}
+
+.product-quantity button {
+    width: 35px;
+    height: 35px;
+    background: #111;
+    color: white;
+    border: none;
+}
+
+.glamour-buy-btn,
+.glamour-cart-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 12px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.glamour-buy-btn {
+    background: #111;
+    color: white;
+    border: 1px solid #111;
+}
+
+.glamour-cart-btn {
+    background: white;
+    color: #111;
+    border: 1px solid #111;
+}
+
+.glamour-buy-btn:hover {
+    background: #333;
+}
+
+.glamour-cart-btn:hover {
+    background: #111;
+    color: white;
+}
+
+.product-description {
+    margin-top: 35px;
+}
+
+.product-description h4 {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.product-description p,
+.product-details p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.product-details {
+    margin-top: 25px;
+}
+
+.product-details strong {
+    color: #111;
+}
+
+@media (max-width: 768px) {
+    .product-title {
+        font-size: 25px;
+    }
+
+    .glamour-product-info {
+        padding: 20px 10px;
+    }
+}
+.bg-light {
+    background-color: #ffffff !important;
+}
+
+/* GLAMOUR — PRODUCT GALLERY FIX */
+
+.glamour-gallery {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.main-product-image {
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+.main-product-image img,
+#mainProductImage {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    display: block;
+}
+
+.product-thumbnails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.product-thumbnails img {
+    width: 95px !important;
+    height: 115px !important;
+    object-fit: contain !important;
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.product-thumbnails img:hover {
+    border-color: #111;
+}
+
+.glamour-product-info {
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.glamour-gallery img {
+    max-width: 100%;
+}
+
+/* GLAMOUR — 6 PRODUCT THUMBNAILS */
+
+.product-thumbnails {
+    display: grid !important;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 120px);
+    justify-content: center;
+    align-items: center;
+    gap: 15px 20px;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.product-thumbnails img {
+    width: 100px !important;
+    height: 120px !important;
+    object-fit: contain !important;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+.product-thumbnails img:hover {
+    border-color: #111;
+    transform: scale(1.04);
+}
+/* ===== GLAMOUR FOOTER ===== */
+
+.glamour-footer {
+    width: 100%;
+    background: #111111;
+    color: #ffffff;
+    padding: 50px 0 35px;
+    margin: 0;
+}
+
+.glamour-footer-container {
+    width: 86%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.glamour-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding-bottom: 45px;
+}
+
+.glamour-footer-column h4 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.glamour-footer-column hr {
+    border: 0;
+    border-top: 1px solid #292929;
+    margin-bottom: 20px;
+}
+
+.glamour-footer-column p,
+.glamour-footer-column a {
+    color: #c9c9c9;
+    font-size: 16px;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.glamour-footer-column a {
+    display: block;
+    margin-bottom: 7px;
+    transition: 0.3s;
+}
+
+.glamour-footer-column a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.glamour-footer-column i {
+    margin-right: 8px;
+    color: #ffffff;
+}
+
+.glamour-newsletter {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.glamour-newsletter input {
+    min-width: 0;
+    flex: 1;
+    padding: 12px;
+    background: #191919;
+    border: 1px solid #383838;
+    color: white;
+    outline: none;
+}
+
+.glamour-newsletter button {
+    padding: 10px 20px;
+    background: #303030;
+    border: 1px solid #383838;
+    color: white;
+    cursor: pointer;
+}
+
+.glamour-newsletter button:hover {
+    background: #555555;
+}
+
+.glamour-footer-bottom {
+    border-top: 1px solid #292929;
+    padding-top: 30px;
+}
+
+.glamour-socials {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.glamour-socials a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #383838;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.glamour-socials a:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+.glamour-footer-bottom p {
+    color: #c9c9c9;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    .glamour-footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .glamour-footer-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .glamour-footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* GLAMOUR CONTACT PAGE */
+
+.glamour-contact-page {
+    background: #fff;
+    padding: 75px 0 85px;
+    color: #111;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.contact-heading span {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #999;
+}
+
+.contact-heading h1 {
+    font-size: 42px;
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.contact-heading p {
+    color: #888;
+    font-size: 15px;
+}
+
+.contact-details {
+    padding: 25px 45px 25px 20px;
+}
+
+.contact-details h2 {
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.contact-intro {
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    margin-bottom: 23px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+}
+
+.contact-item span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.contact-item p {
+    margin: 7px 0 0;
+    font-size: 15px;
+    color: #222;
+}
+
+.contact-button {
+    display: inline-block;
+    background: #111;
+    color: white !important;
+    padding: 14px 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.contact-button:hover {
+    background: #444;
+}
+
+.glamour-map {
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-shadow: 0 8px 25px rgba(0,0,0,.07);
+}
+
+.glamour-map iframe {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .glamour-contact-page {
+        padding: 45px 0;
+    }
+
+    .contact-heading {
+        margin-bottom: 35px;
+    }
+
+    .contact-heading h1 {
+        font-size: 32px;
+    }
+
+    .contact-details {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    .glamour-map iframe {
+        height: 300px;
+    }
+}
