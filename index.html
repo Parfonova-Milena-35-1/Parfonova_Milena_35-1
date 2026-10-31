@@ -352,6 +352,39 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+     <script>
+(function () {
+    const experiment = Math.random() < 0.5 ? 'A' : 'B';
+
+    const hero = document.querySelector('.glamour-new');
+
+    if (!hero) return;
+
+    const text = hero.querySelector('.glamour-hero-content p');
+
+    if (!text) return;
+
+    if (experiment === 'B') {
+        text.textContent = 'SHOP THE COLLECTION →';
+    }
+
+    if (typeof gtag === 'function') {
+        gtag('event', 'ab_test_view', {
+            experiment_name: 'glamour_hero_test',
+            experiment_variant: experiment
+        });
+    }
+
+    hero.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+            gtag('event', 'ab_test_click', {
+                experiment_name: 'glamour_hero_test',
+                experiment_variant: experiment
+            });
+        }
+    });
+})();
+</script>
 </body>
 
 </html>
