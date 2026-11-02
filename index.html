@@ -352,17 +352,14 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
-   
-<script>
+     <script>
 (function () {
-    const storageKey = 'glamour_ab_variant';
+   const params = new URLSearchParams(window.location.search);
+const forcedVariant = params.get('ab_variant');
 
-    let experiment = localStorage.getItem(storageKey);
-
-    if (!experiment) {
-        experiment = Math.random() < 0.5 ? 'A' : 'B';
-        localStorage.setItem(storageKey, experiment);
-    }
+const experiment = (forcedVariant === 'A' || forcedVariant === 'B')
+    ? forcedVariant
+    : (Math.random() < 0.5 ? 'A' : 'B');
 
     const hero = document.querySelector('.glamour-new');
 
@@ -392,9 +389,6 @@ https://templatemo.com/tm-559-zay-shop
         }
     });
 })();
-</script>
-
-
 </script>
 </body>
 
