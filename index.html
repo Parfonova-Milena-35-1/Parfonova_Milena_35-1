@@ -33,6 +33,14 @@ TemplateMo 559 Zay Shop
 https://templatemo.com/tm-559-zay-shop
 
 -->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z7i0mfuae");
+</script>
 </head>
 
 <body>
@@ -354,98 +362,39 @@ https://templatemo.com/tm-559-zay-shop
     <!-- End Script -->
      <script>
 (function () {
-    'use strict';
+   const params = new URLSearchParams(window.location.search);
+const forcedVariant = params.get('ab_variant');
 
-    // GLAMOUR A/B test: 50/50 split with a stable variant per browser.
-    const EXPERIMENT_NAME = 'glamour_hero_test';
-    const STORAGE_KEY = 'glamour_hero_test_variant';
+const experiment = (forcedVariant === 'A' || forcedVariant === 'B')
+    ? forcedVariant
+    : (Math.random() < 0.5 ? 'A' : 'B');
+
     const hero = document.querySelector('.glamour-new');
 
     if (!hero) return;
 
-    const cta = hero.querySelector('.glamour-hero-content p');
-    if (!cta) return;
+    const text = hero.querySelector('.glamour-hero-content p');
 
-    // Optional test links: ?ab_variant=A or ?ab_variant=B.
-    // Without this parameter, visitors are assigned randomly and consistently.
-    const params = new URLSearchParams(window.location.search);
-    const forcedVariant = params.get('ab_variant');
-    const validForcedVariant =
-        forcedVariant === 'A' || forcedVariant === 'B';
+    if (!text) return;
 
-    function createVariant() {
-        if (window.crypto && window.crypto.getRandomValues) {
-            const values = new Uint32Array(1);
-            window.crypto.getRandomValues(values);
-            return values[0] / 4294967296 < 0.5 ? 'A' : 'B';
-        }
-        return Math.random() < 0.5 ? 'A' : 'B';
+    if (experiment === 'B') {
+        text.textContent = 'SHOP THE COLLECTION →';
     }
 
-    let variant;
-
-    if (validForcedVariant) {
-        variant = forcedVariant;
-    } else {
-        try {
-            variant = window.localStorage.getItem(STORAGE_KEY);
-
-            if (variant !== 'A' && variant !== 'B') {
-                variant = createVariant();
-                window.localStorage.setItem(STORAGE_KEY, variant);
-            }
-        } catch (error) {
-            // If browser storage is unavailable, use a random variant for this visit.
-            variant = createVariant();
-        }
-    }
-
-    // Variant A: original CTA. Variant B: alternative CTA.
-    const ctaText = variant === 'B'
-        ? 'SHOP THE COLLECTION →'
-        : 'DISCOVER NOW →';
-
-    cta.textContent = ctaText;
-
-    const eventParams = {
-        experiment_name: EXPERIMENT_NAME,
-        experiment_variant: variant
-    };
-
-    // Record that this visitor saw the tested version.
-    if (typeof window.gtag === 'function') {
-        window.gtag('event', 'ab_test_view', eventParams);
-    }
-
-    // Record one click and allow Analytics time to send the event before navigation.
-    let clickTracked = false;
-
-    hero.addEventListener('click', function (event) {
-        if (clickTracked) return;
-        clickTracked = true;
-
-        if (typeof window.gtag !== 'function') return;
-
-        event.preventDefault();
-
-        const destination = hero.href;
-        let navigated = false;
-
-        function continueToShop() {
-            if (navigated) return;
-            navigated = true;
-            window.location.href = destination;
-        }
-
-        window.gtag('event', 'ab_test_click', {
-            ...eventParams,
-            cta_text: ctaText,
-            link_url: destination,
-            event_callback: continueToShop,
-            event_timeout: 1000
+    if (typeof gtag === 'function') {
+        gtag('event', 'ab_test_view', {
+            experiment_name: 'glamour_hero_test',
+            experiment_variant: experiment
         });
+    }
 
-        window.setTimeout(continueToShop, 1100);
+    hero.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+            gtag('event', 'ab_test_click', {
+                experiment_name: 'glamour_hero_test',
+                experiment_variant: experiment
+            });
+        }
     });
 })();
 </script>
